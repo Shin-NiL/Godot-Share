@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://share_btn.gd" type="Script" id=1]
+
+[node name="main" type="Node"]
+
+[node name="share_btn" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 530.0
+margin/right = 720.0
+margin/bottom = 671.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "SHARE CAPTURE"
+flat = false
+script/script = ExtResource( 1 )
+
+[connection signal="pressed" from="share_btn" to="share_btn" method="_on_share_btn_pressed"]
+
+
