@@ -4,7 +4,7 @@ var share = null # our share singleton instance
 
 func _ready():
 	# initialize the share singleton if it exists
-	if (Engine.has_singleton("GodotShare")):
+	if Engine.has_singleton("GodotShare"):
 		share = Engine.get_singleton("GodotShare")
 
 
@@ -20,8 +20,6 @@ func _on_share_btn_pressed():
 	var img = get_viewport().get_texture().get_data()
 	# Flip it on the y-axis (because it's flipped)
 	img.flip_y()
-	
-	print(img)
 	
 	# user://tmp.png
 	var image_save_path = OS.get_user_data_dir() + "/tmp.png"
