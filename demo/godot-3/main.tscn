@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://share_btn.gd" type="Script" id=1]
+
+[node name="main" type="Node" index="0"]
+
+[node name="share_btn" type="Button" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 530.0
+margin_right = 720.0
+margin_bottom = 671.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "SHARE CAPTURE"
+flat = false
+align = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Rect" ]
+
+[connection signal="pressed" from="share_btn" to="share_btn" method="_on_share_btn_pressed"]
+
+
