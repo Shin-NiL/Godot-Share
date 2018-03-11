@@ -4,7 +4,7 @@ GodotShare
 ==========
 This is a share module for [Godot Game Engine](https://godotengine.org/) (2 & 3) for Android & iOS. You'll be able to share text and/or images in your apps.
 
-![Image Sharing Screenshot](/media/2018-03-11 13_48.png "Image Sharing Screenshot")
+![Image Sharing Screenshot](/media/screenshot.png "Image Sharing Screenshot")
 
 How to use
 ----------
