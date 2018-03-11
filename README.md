@@ -2,9 +2,9 @@
 
 GodotShare 
 ==========
-This is a share module for [Godot Game Engine](https://godotengine.org/) for Android & iOS. You'll be able to share text and/or images in your apps.
+This is a share module for [Godot Game Engine](https://godotengine.org/) (2 & 3) for Android & iOS. You'll be able to share text and/or images in your apps.
 
-
+![Image Sharing Screenshot](/media/2018-03-11 13_48.png "Image Sharing Screenshot")
 
 How to use
 ----------
@@ -17,7 +17,7 @@ In your project goto Export > Target > Android:
 		- Custom Package:
 			- place your apk from build
 			
-- To enable the module on Android, add the path to the module to the "modules" property on the [android] section of your engine.cfg file. It should look like this:
+- Add the following lines to ```project.godot``` file (Godot 3) or ```engine.cfg``` (Godot 2):
 
 ```
 	[android]
@@ -47,7 +47,13 @@ shareText(title, subject, text)
 # @param String title
 # @param String subject
 # @param String text
-void sharePic(path, title, subject, text);
+void sharePic(path, title, subject, text)
 ```
 
-In the demo directory you'll find a working sample project where a screen capture is shared.
+Demonstration
+-------------
+In the demo directory you'll find a working sample project for Godot 2 and 3 where a screen capture is shared.
+
+### Known Issues
+The screen capture isn't working for the Godot 3 project, it's a known issue for mobile platforms and you can see more details [here](https://github.com/godotengine/godot/issues/16694).
+
