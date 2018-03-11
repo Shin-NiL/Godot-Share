@@ -47,6 +47,12 @@ void GodotShare::sharePic(const String &path, const String &title, const String 
 
 
 void GodotShare::_bind_methods() {
-    ObjectTypeDB::bind_method("shareText",&GodotShare::shareText);
-    ObjectTypeDB::bind_method("sharePic",&GodotShare::sharePic);
+#if VERSION_MAJOR == 3
+    ClassDB::bind_method(D_METHOD("shareText"), &GodotShare::shareText);
+    ClassDB::bind_method(D_METHOD("sharePic"), &GodotShare::sharePic);
+#else
+    ObjectTypeDB::bind_method("shareText", &GodotShare::shareText);
+    ObjectTypeDB::bind_method("sharePic", &GodotShare::sharePic);
+#endif
+    
 }

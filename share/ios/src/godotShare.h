@@ -1,10 +1,15 @@
 #ifndef GODOT_SHARE_H
 #define GODOT_SHARE_H
 
+#include <version_generated.gen.h>
 #include "reference.h"
 
 class GodotShare : public Reference {
-    OBJ_TYPE(GodotShare,Reference);
+#if VERSION_MAJOR == 3
+    GDCLASS(GodotShare, Reference);
+#else
+    OBJ_TYPE(GodotShare, Reference);
+#endif
     
 
 protected:
