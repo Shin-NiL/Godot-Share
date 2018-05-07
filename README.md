@@ -50,11 +50,11 @@ The following methods are available:
 shareText(title, subject, text)
 
 # Share image
-# @param String path The image location full path
+# @param String absolute_path The image location full path
 # @param String title
 # @param String subject
 # @param String text
-void sharePic(path, title, subject, text)
+void sharePic(absolute_path, title, subject, text)
 ```
 
 Demonstration
