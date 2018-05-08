@@ -4,7 +4,7 @@ var share = null # our share singleton instance
 
 func _ready():
 	# initialize the share singleton if it exists
-	if (Globals.has_singleton("GodotShare")):
+	if Globals.has_singleton("GodotShare"):
 		share = Globals.get_singleton("GodotShare")
 
 
@@ -17,11 +17,12 @@ func _on_share_btn_pressed():
 	yield(get_tree(), "idle_frame")
 	yield(get_tree(), "idle_frame")
 	
-	# user://tmp.png
+	# The file must be saved at user:// root
 	var image_save_path = OS.get_data_dir() + "/tmp.png"
 	
-	# actually get takes the and saves caputure
+	# actually takes the caputure
 	var capture = view_port.get_screen_capture()
+	# saves the capture as user://tmp.png
 	capture.save_png(image_save_path)
 	
 	# if share was found, use it

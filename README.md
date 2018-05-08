@@ -50,15 +50,17 @@ The following methods are available:
 shareText(title, subject, text)
 
 # Share image
-# @param String absolute_path The image location full path
+# @param String image_abs_path The image location absolute path
 # @param String title
 # @param String subject
 # @param String text
-void sharePic(absolute_path, title, subject, text)
+void sharePic(image_abs_path, title, subject, text)
 ```
 
-Demonstration
+Usage
 -------------
+An important note is that the image you want to share must be saved on the ```"user://"``` virtual directory root to be accessible, you can use ```OS.get_user_data_dir()``` to get its absolute path (required by ```sharePic```).
+
 In the demo directory you'll find a working sample project for Godot 2 and 3 where a screen capture is shared.
 
 ### Known Issues
