@@ -11,3 +11,4 @@ def configure(env):
 
 	if env['platform'] == "iphone":
 		env.Append(LINKFLAGS=['-ObjC'])
+		env.Append(CPPPATH=['#core'])
