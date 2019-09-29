@@ -24,9 +24,16 @@ void GodotShare::shareText(const String &title, const String &subject, const Str
     NSArray * shareItems = @[message];
     
     UIActivityViewController * avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
-    
-    [root_controller presentViewController:avc animated:YES completion:nil];
-
+    //if iPhone
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [root_controller presentViewController:avc animated:YES completion:nil];
+    }
+    //if iPad
+    else {
+        // Change Rect to position Popover
+        UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:avc];
+        [popup presentPopoverFromRect:CGRectMake(root_controller.view.frame.size.width/2, root_controller.view.frame.size.height/4, 0, 0)inView:root_controller.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
 }
 
 void GodotShare::sharePic(const String &path, const String &title, const String &subject, const String &text) {
@@ -40,8 +47,16 @@ void GodotShare::sharePic(const String &path, const String &title, const String 
     NSArray * shareItems = @[message, image];
     
     UIActivityViewController * avc = [[UIActivityViewController alloc] initWithActivityItems:shareItems applicationActivities:nil];
-    
-    [root_controller presentViewController:avc animated:YES completion:nil];
+     //if iPhone
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [root_controller presentViewController:avc animated:YES completion:nil];
+    }
+    //if iPad
+    else {
+        // Change Rect to position Popover
+        UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:avc];
+        [popup presentPopoverFromRect:CGRectMake(root_controller.view.frame.size.width/2, root_controller.view.frame.size.height/4, 0, 0)inView:root_controller.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
 }
 
 
