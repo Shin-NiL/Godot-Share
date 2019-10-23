@@ -1,5 +1,3 @@
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3MJE3M4FMJYGN&lc=BR&item_name=Shin%2dNiL%27s%20Github&item_number=Github&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
-
 GodotShare 
 ==========
 This is a share module for [Godot Game Engine](https://godotengine.org/) (2 & 3) for Android & iOS. You'll be able to share text and/or images in your apps.
@@ -49,6 +47,22 @@ Just make sure you're using your custom template (compiled in the previous step)
 #### Godot 3
 - Export your project from Godot, it'll create an Xcode project;
 - Copy the library (.a) you have compiled following the official documentation inside the exported Xcode project. You must override the 'your_project_name.a' file with this file.
+
+
+Donations
+---------
+Was this project useful for you? Wanna make a donation? These are the options:
+
+### Paypal
+
+My [Paypal donation link](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=3MJE3M4FMJYGN&lc=BR&item_name=Shin%2dNiL%27s%20Github&item_number=Github&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
+
+### Brave browser
+
+If you don't have any money, but still willing to help me you can install [Brave browser](https://brave.com/) using my [referral link](https://brave.com/shi012	). 
+If you do so and keep using the browser, I'll receive some reward.
+
+If you're already a Brave user, please consider donating some BATs ;)
 
 API Reference (Android & iOS)
 -------------
