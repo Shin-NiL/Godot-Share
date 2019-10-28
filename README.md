@@ -10,6 +10,8 @@ How to use
 ### Android
 To use this module you'll need a custom template for Android. You can build it by yourself or download a precompiled one. 
 
+Another option available for Godot 3.2+ is the [new Android plugin system](https://godotengine.org/article/godot-3-2-will-get-new-android-plugin-system), much easier to use (no recompilation needed). You can find a port of this module using this system [here](https://github.com/Shin-NiL/Godot-Android-Share-Plugin).
+
 #### Compiling the template (First Option)
 This is harder, but you'll have more control over the building process. You can, for example, include any other module you want.
 For that, do the following steps:
