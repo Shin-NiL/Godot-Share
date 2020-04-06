@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.app.*;
 import android.net.Uri;
 import android.content.ContextWrapper;
-import android.support.v4.content.FileProvider;
+import androidx.core.v4.content.FileProvider;
 
 import android.util.Log;
 

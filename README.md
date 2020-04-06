@@ -28,6 +28,12 @@ If you don't want or can't build the template by yourself, you can find a precom
 	- Options:
 		- Custom Package:
 			- place the template apk you had compiled (or downloaded)
+
+- open (Project)/android/build/gradle.properties file and add the following line
+```
+android.useAndroidX=true
+android.enableJetifier=true
+```
 			
 - Add the following lines to ```project.godot``` file (Godot 3) or ```engine.cfg``` (Godot 2):
 
