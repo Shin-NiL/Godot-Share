@@ -17,7 +17,7 @@ GodotShare::~GodotShare() {
 
 void GodotShare::shareText(const String &title, const String &subject, const String &text) {
     
-    ViewController *root_controller = (ViewController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).window.rootViewController;
+    UIViewController *root_controller = [[UIApplication sharedApplication] delegate].window.rootViewController;
     
     NSString * message = [NSString stringWithCString:text.utf8().get_data() encoding:NSUTF8StringEncoding];
     
@@ -31,13 +31,14 @@ void GodotShare::shareText(const String &title, const String &subject, const Str
     //if iPad
     else {
         // Change Rect to position Popover
-        UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:avc];
-        [popup presentPopoverFromRect:CGRectMake(root_controller.view.frame.size.width/2, root_controller.view.frame.size.height/4, 0, 0)inView:root_controller.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	avc.modalPresentationStyle = UIModalPresentationPopover;
+	avc.popoverPresentationController.sourceView = root_controller.view;
+	[root_controller presentViewController:avc animated:YES completion:nil];
     }
 }
 
 void GodotShare::sharePic(const String &path, const String &title, const String &subject, const String &text) {
-    ViewController *root_controller = (ViewController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).window.rootViewController;
+    UIViewController *root_controller = [[UIApplication sharedApplication] delegate].window.rootViewController;
     
     NSString * message = [NSString stringWithCString:text.utf8().get_data() encoding:NSUTF8StringEncoding];
     NSString * imagePath = [NSString stringWithCString:path.utf8().get_data() encoding:NSUTF8StringEncoding];
@@ -54,8 +55,9 @@ void GodotShare::sharePic(const String &path, const String &title, const String 
     //if iPad
     else {
         // Change Rect to position Popover
-        UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:avc];
-        [popup presentPopoverFromRect:CGRectMake(root_controller.view.frame.size.width/2, root_controller.view.frame.size.height/4, 0, 0)inView:root_controller.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	avc.modalPresentationStyle = UIModalPresentationPopover;
+	avc.popoverPresentationController.sourceView = root_controller.view;
+	[root_controller presentViewController:avc animated:YES completion:nil];
     }
 }
 
