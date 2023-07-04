@@ -31,9 +31,11 @@ void GodotShare::shareText(const String &title, const String &subject, const Str
     //if iPad
     else {
         // Change Rect to position Popover
-	avc.modalPresentationStyle = UIModalPresentationPopover;
-	avc.popoverPresentationController.sourceView = root_controller.view;
-	[root_controller presentViewController:avc animated:YES completion:nil];
+        avc.modalPresentationStyle = UIModalPresentationPopover;
+        avc.popoverPresentationController.sourceView = root_controller.view;
+        avc.popoverPresentationController.sourceRect = CGRectMake(CGRectGetMidX(root_controller.view.bounds), CGRectGetMidY(root_controller.view.bounds),0,0);
+        avc.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection(0);
+        [root_controller presentViewController:avc animated:YES completion:nil];
     }
 }
 
@@ -55,9 +57,11 @@ void GodotShare::sharePic(const String &path, const String &title, const String 
     //if iPad
     else {
         // Change Rect to position Popover
-	avc.modalPresentationStyle = UIModalPresentationPopover;
-	avc.popoverPresentationController.sourceView = root_controller.view;
-	[root_controller presentViewController:avc animated:YES completion:nil];
+        avc.modalPresentationStyle = UIModalPresentationPopover;
+        avc.popoverPresentationController.sourceView = root_controller.view;
+        avc.popoverPresentationController.sourceRect = CGRectMake(CGRectGetMidX(root_controller.view.bounds), CGRectGetMidY(root_controller.view.bounds),0,0);
+        avc.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection(0);
+        [root_controller presentViewController:avc animated:YES completion:nil];
     }
 }
 
